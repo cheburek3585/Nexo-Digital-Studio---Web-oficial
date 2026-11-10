@@ -46,17 +46,60 @@ h2{font-size:clamp(30px,4vw,43px);line-height:1.2;margin:12px 0}
 .about{background:linear-gradient(120deg,#101c30,#11152b);text-align:center}
 .about p{max-width:760px;margin:20px auto;color:#b8c6d9}
 
-.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-.portfolio-card{overflow:hidden;border:1px solid #293b58;border-radius:16px;background:#111d30;transition:.3s}
-.portfolio-card:hover{transform:translateY(-8px);border-color:#22d3ee}
-.portfolio-art{height:210px;display:flex;align-items:center;justify-content:center;font-size:75px;position:relative;overflow:hidden}
-.art-one{background:radial-gradient(circle,#267ca5,#14294b 55%,#0b1120)}
-.art-two{background:radial-gradient(circle,#7952bd,#29204c 55%,#0b1120)}
-.art-three{background:radial-gradient(circle,#168a9b,#17314c 55%,#0b1120)}
+
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+
+.portfolio-card{
+  overflow:hidden;
+  border:1px solid #263b58;
+  border-radius:18px;
+  background:linear-gradient(145deg,#14233a,#0b1424);
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+
+.portfolio-card:hover{
+  transform:translateY(-9px);
+  border-color:#22d3ee;
+  box-shadow:0 15px 40px #22d3ee22,0 0 25px #8b5cf633;
+}
+
+.portfolio-art{
+  height:210px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:75px;
+  position:relative;
+  overflow:hidden;
+  transition:transform .5s ease,filter .5s ease;
+}
+
+.portfolio-card:hover .portfolio-art{
+  transform:scale(1.04);
+  filter:brightness(1.18);
+}
+
+.art-one{
+  background:radial-gradient(circle,#267ca5,#14294b 55%,#0b1120);
+}
+
+.art-two{
+  background:radial-gradient(circle,#7952bd,#29204c 55%,#0b1120);
+}
+
+.art-three{
+  background:radial-gradient(circle,#168a9b,#17314c 55%,#0b1120);
+}
+
 .portfolio-info{padding:23px}
 .portfolio-info small{color:#22d3ee;letter-spacing:2px;text-transform:uppercase}
 .portfolio-info h3{margin:9px 0}
 .portfolio-info p{color:#aab8cc;font-size:14px}
+
 
 /* PREGUNTAS FRECUENTES */
 #preguntas{padding:90px 8%}
@@ -134,38 +177,53 @@ footer{text-align:center;padding:28px;color:#8595ad;border-top:1px solid #26334b
   </div>
 </section>
 
+
 <section id="proyectos">
-  <div class="eyebrow">Creative Lab · Portfolio</div>
+  <div class="eyebrow">Nuestro universo creativo · Portfolio</div>
   <h2>Ideas que toman forma.</h2>
-  <p class="intro">Exploramos nuevas posibilidades combinando tecnología, creatividad e inteligencia artificial.</p>
+  <p class="intro">
+    Exploramos nuevas formas de conectar el mundo real con las posibilidades del universo digital.
+  </p>
+
   <div class="portfolio-grid">
+
     <article class="portfolio-card">
-      <div class="portfolio-art art-one">🏙️</div>
+      <div class="portfolio-art art-one">
+        <span>01 · ARQUITECTURA 3D</span>
+      </div>
       <div class="portfolio-info">
-        <small>Concepto 01 · 3D</small>
         <h3>Digital Twin</h3>
-        <p>Representación digital de espacios y entornos físicos mediante tecnologías 3D.</p>
+        <p>Representación digital de espacios y arquitectura mediante visualización 3D realista.</p>
       </div>
     </article>
+
     <article class="portfolio-card">
-      <div class="portfolio-art art-two">✧</div>
+      <div class="portfolio-art art-two">
+        <span>02 · INTELIGENCIA ARTIFICIAL</span>
+      </div>
       <div class="portfolio-info">
-        <small>Concepto 02 · AI</small>
         <h3>AI Creative Lab</h3>
-        <p>Exploración de imágenes, creatividad visual y nuevas posibilidades de la IA.</p>
+        <p>Creatividad visual impulsada por inteligencia artificial para desarrollar conceptos e imágenes.</p>
       </div>
     </article>
+
     <article class="portfolio-card">
-      <div class="portfolio-art art-three">◇</div>
+      <div class="portfolio-art art-three">
+        <span>03 · PRODUCTO 3D</span>
+      </div>
       <div class="portfolio-info">
-        <small>Concepto 03 · Visual</small>
-        <h3>Product Visualization</h3>
-        <p>Conceptos de presentación digital de productos mediante visualización 3D.</p>
+        <h3>Product Vision</h3>
+        <p>Presentación digital de productos con imágenes 3D, materiales y acabados realistas.</p>
       </div>
     </article>
+
   </div>
-  <p style="color:#8496ae;font-size:12px;margin-top:20px">Proyectos conceptuales de demostración. No representan encargos realizados para clientes.</p>
+
+  <p class="intro">
+    Proyectos conceptuales de demostración. No representan encargos realizados para clientes.
+  </p>
 </section>
+
 
 <section class="about" id="nosotros">
  <div class="eyebrow">Nexo Digital Studio</div>
