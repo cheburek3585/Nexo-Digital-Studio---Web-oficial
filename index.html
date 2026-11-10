@@ -8,7 +8,64 @@
 <meta name="description" content="Nexo Digital Studio: inteligencia artificial, marketing digital, diseño web y experiencias 3D.">
 <title>Nexo Digital Studio | Diseño, IA y experiencias 3D</title>
 <meta name="description" content="Nexo Digital Studio: creatividad digital, inteligencia artificial, visualización 3D, diseño web y marketing digital. Ideas que conectan. Tecnología que transforma.">
-<style>
+
+/* PREGUNTAS FRECUENTES */
+#preguntas {
+  padding: 90px 8%;
+}
+
+.faq-list {
+  max-width: 850px;
+  margin: 35px auto 0;
+}
+
+.faq-item {
+  background: linear-gradient(145deg, #14233a, #0d1728);
+  border: 1px solid #263b58;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  padding: 22px 25px;
+  transition: .3s;
+}
+
+.faq-item:hover {
+  border-color: #22d3ee;
+  box-shadow: 0 8px 25px #0004;
+}
+
+.faq-item summary {
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 30px;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  color: #22d3ee;
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: -5px;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-item p {
+  color: #aab8cc;
+  line-height: 1.7;
+  margin-top: 18px;
+}
+
+ <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:Arial,sans-serif;background:#080d19;color:#f4f7ff;line-height:1.7}
