@@ -77,6 +77,17 @@ h2{font-size:clamp(30px,4vw,43px);line-height:1.2;margin:12px 0}
   overflow:hidden;
   transition:transform .5s ease,filter .5s ease;
 }
+  .portfolio-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease;
+}
+
+.portfolio-card:hover .portfolio-art img {
+  transform: scale(1.05);
+}
 
 .portfolio-card:hover .portfolio-art{
   transform:scale(1.04);
