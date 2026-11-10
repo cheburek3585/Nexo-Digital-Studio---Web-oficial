@@ -1,285 +1,520 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Nexo Digital Studio: creatividad digital, inteligencia artificial, visualización 3D, diseño web y marketing digital. Ideas que conectan. Tecnología que transforma.">
-<link rel="icon" href="https://fav.farm/✦">
-<title>Nexo Digital Studio | Diseño, IA y experiencias 3D</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vídeos promocionales con IA, vídeos musicales, homenajes audiovisuales para funerarias, campañas de producto y visualización 3D. Nexo Digital Studio.">
+  <meta name="theme-color" content="#080d19">
+  <meta property="og:title" content="Nexo Digital Studio | Ideas que se hacen ver">
+  <meta property="og:description" content="Vídeo, IA, producto y 3D para llevar ideas creativas al mundo real.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+  <title>Nexo Digital Studio | Vídeo, IA y creatividad 3D</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080d19;
+      --surface: #101a2b;
+      --surface-2: #14233a;
+      --line: #263b58;
+      --white: #f4f7ff;
+      --muted: #aab8cc;
+      --cyan: #22d3ee;
+      --violet: #9b83ff;
+      --green: #a7f3d0;
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      min-width: 320px;
+      background: var(--bg);
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .container { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+    .site-header {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(4, 9, 22, .95);
+      border-bottom: 1px solid rgba(117, 145, 180, .18);
+      backdrop-filter: blur(16px);
+    }
+    .header-inner { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display: inline-flex; align-items: center; flex: 0 0 auto; }
+    .brand-logo { display: block; width: 124px; height: 83px; object-fit: contain; border-radius: 5px; }
+    .main-nav { display: flex; align-items: center; gap: 23px; }
+    .main-nav a { color: #c1cde0; font-size: 12px; transition: color .2s ease; }
+    .main-nav a:hover { color: var(--cyan); }
+    .header-cta, .button {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      border: 0; border-radius: 8px; padding: 12px 18px;
+      background: linear-gradient(100deg, var(--cyan), #9b83ff);
+      color: #07101d; font-weight: 800; font-size: 13px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .header-cta:hover, .button:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(34, 211, 238, .2); }
+    .button.secondary { background: rgba(12, 23, 41, .55); border: 1px solid #52647c; color: var(--white); }
+    .menu-toggle { display: none; color: var(--white); border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 8px 11px; }
 
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#080d19;color:#f4f7ff;line-height:1.7}
-a{text-decoration:none;color:inherit}
+    .hero {
+      position: relative; isolation: isolate; min-height: 650px; display: grid; align-items: center;
+      overflow: hidden; padding: 78px 0 82px;
+      background: radial-gradient(ellipse at 78% 48%, rgba(32, 99, 143, .36), transparent 34%),
+                  radial-gradient(ellipse at 59% 100%, rgba(120, 81, 190, .12), transparent 38%),
+                  linear-gradient(130deg, #080d19 15%, #101c31 100%);
+    }
+    .hero::before, .hero::after { content: ""; position: absolute; z-index: -1; border: 1px solid rgba(61, 130, 167, .2); border-radius: 50%; }
+    .hero::before { width: 520px; height: 520px; right: -140px; top: 40px; }
+    .hero::after { width: 410px; height: 410px; right: -82px; top: 95px; border-color: rgba(155, 131, 255, .2); }
+    .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; gap: 40px; align-items: center; }
+    .eyebrow { color: var(--cyan); font-size: 10px; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; }
+    .hero h1 { max-width: 670px; margin: 19px 0 20px; font-size: clamp(43px, 6.1vw, 76px); line-height: 1.02; letter-spacing: -2.9px; }
+    .gradient-text { background: linear-gradient(90deg, var(--cyan), #a791ff 80%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero-copy { max-width: 575px; color: #bac8db; font-size: clamp(16px, 1.8vw, 19px); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .hero-note { margin-top: 22px; color: #93a5bd; font-size: 11px; }
+    .hero-note strong { color: var(--white); font-weight: 600; }
 
-header{height:82px;padding:0 8%;display:flex;align-items:center;justify-content:space-between;background:#080d19ef;border-bottom:1px solid #26334b;position:sticky;top:0;z-index:10;backdrop-filter:blur(15px)}
-.logo{font-size:25px;font-weight:800;letter-spacing:3px}
-.logo span{color:#22d3ee}
-nav{display:flex;gap:25px}
-nav a{font-size:13px;color:#b8c6d9;transition:.3s}
-nav a:hover{color:#22d3ee}
+    .visual-stage {
+      position: relative; width: min(100%, 500px); min-height: 420px; margin-left: auto;
+      display: grid; place-items: center;
+    }
+    .stage-halo { position: absolute; width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(circle, rgba(34, 211, 238, .18), rgba(119, 91, 227, .1) 48%, transparent 72%); filter: blur(8px); }
+    .orbit { position: absolute; width: 360px; height: 360px; border: 1px solid rgba(68, 164, 196, .3); border-radius: 50%; transform: rotate(-25deg) scaleY(.42); }
+    .orbit.two { width: 420px; height: 420px; border-color: rgba(155, 131, 255, .24); transform: rotate(25deg) scaleY(.38); }
+    .product-window {
+      position: relative; z-index: 2; width: 330px; padding: 22px 24px 20px;
+      border: 1px solid rgba(117, 156, 195, .35); border-radius: 22px;
+      background: linear-gradient(145deg, rgba(20, 35, 58, .94), rgba(9, 17, 31, .96));
+      box-shadow: 0 30px 90px rgba(0, 0, 0, .45), 0 0 70px rgba(34, 211, 238, .08);
+      transform: rotate(-3deg);
+    }
+    .window-top { display: flex; align-items: center; justify-content: space-between; color: #a7b8cd; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .window-dots { display: flex; gap: 5px; }
+    .window-dots i { width: 5px; height: 5px; border-radius: 50%; background: #49607c; }
+    .window-dots i:first-child { background: var(--cyan); }
+    .pizza-art { height: 232px; position: relative; display: grid; place-items: center; margin: 16px 0 8px; }
+    .pizza-glow { position: absolute; width: 200px; height: 160px; border-radius: 50%; background: rgba(248, 151, 63, .18); filter: blur(22px); }
+    .pizza-disc { position: absolute; width: 144px; height: 144px; border-radius: 50%; border: 8px solid #ed9d4c; background: radial-gradient(circle, #bd3e32 0 8%, #f4c65e 9% 16%, #a9362e 17% 21%, #f0c960 22% 42%, #b94734 43% 47%, #efa44c 48% 100%); box-shadow: 0 0 30px rgba(255, 162, 72, .23), inset 0 0 18px rgba(108, 42, 28, .3); }
+    .topping { position: absolute; width: 16px; height: 16px; border: 3px solid #f8cf69; border-radius: 50%; background: #9f292a; box-shadow: 0 0 10px rgba(245, 108, 72, .25); }
+    .t1 { top: 45px; left: 143px; }.t2 { top: 81px; right: 95px; }.t3 { bottom: 43px; left: 112px; }.t4 { bottom: 64px; right: 127px; }
+    .splash { position: absolute; width: 8px; height: 8px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 14px var(--cyan); }
+    .s1 { top: 43px; right: 96px; }.s2 { top: 79px; left: 100px; width: 5px; height: 5px; background: var(--violet); }.s3 { bottom: 44px; right: 103px; width: 6px; height: 6px; background: #f89b51; }
+    .layer-tag { position: absolute; color: #d8e5f5; font-size: 7px; letter-spacing: 1px; text-transform: uppercase; }
+    .layer-tag.left { left: 12px; top: 91px; }.layer-tag.right { right: 7px; bottom: 74px; color: var(--cyan); }
+    .window-caption { display: flex; justify-content: space-between; align-items: center; color: #b7c6d9; font-size: 10px; border-top: 1px solid rgba(155, 178, 203, .17); padding-top: 12px; }
+    .window-caption b { color: var(--cyan); font-size: 8px; letter-spacing: 1px; }
+    .floating-tag { position: absolute; z-index: 3; padding: 9px 12px; border-radius: 9px; background: rgba(13, 25, 44, .9); border: 1px solid rgba(115, 150, 189, .28); box-shadow: 0 12px 35px #0005; font-size: 9px; letter-spacing: .8px; color: #d4e1f1; }
+    .floating-tag strong { color: var(--cyan); }
+    .floating-tag.one { top: 42px; right: 8px; transform: rotate(5deg); }
+    .floating-tag.two { bottom: 55px; left: 0; transform: rotate(-5deg); }
+    .stage-caption { position: absolute; bottom: 0; right: 10px; color: #798aa2; font-size: 9px; }
 
-.hero{min-height:650px;padding:100px 8%;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 80% 45%,#173b66 0%,transparent 38%),linear-gradient(130deg,#080d19,#101c31)}
-.hero:after{content:"";position:absolute;width:380px;height:380px;border-radius:50%;right:12%;top:18%;background:radial-gradient(circle at 35% 30%,#b4f8ff,#20c8e8 20%,#5265dd 48%,#171d43 72%);box-shadow:0 0 70px #20c8e866,0 0 150px #7458f455;animation:float 6s ease-in-out infinite;opacity:.85}
-@keyframes float{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-22px) rotate(8deg)}}
-.hero-content{position:relative;z-index:2;max-width:700px}
-.tag{color:#22d3ee;text-transform:uppercase;letter-spacing:4px;font-size:12px;margin-bottom:22px}
-h1{font-size:clamp(45px,7vw,78px);line-height:1.08;letter-spacing:-2px;margin-bottom:25px}
-.gradient{background:linear-gradient(90deg,#22d3ee,#9b83ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{font-size:18px;color:#bac8db;max-width:580px}
-.button{display:inline-block;margin-top:30px;padding:14px 25px;background:linear-gradient(90deg,#22d3ee,#8b72ff);color:#07101d;font-weight:bold;border-radius:7px;transition:.3s}
-.button:hover{transform:translateY(-4px);box-shadow:0 8px 30px #22d3ee44}
+    .price-ribbon { border-top: 1px solid rgba(117, 145, 180, .14); border-bottom: 1px solid rgba(117, 145, 180, .14); background: #0b1322; }
+    .price-ribbon-inner { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .price-point { padding: 20px 18px; border-right: 1px solid rgba(117, 145, 180, .14); }
+    .price-point:first-child { padding-left: 0; }
+    .price-point:last-child { border: 0; }
+    .price-point span { display: block; color: #91a4bd; font-size: 9px; text-transform: uppercase; letter-spacing: 1.2px; }
+    .price-point strong { display: block; margin-top: 3px; color: var(--white); font-size: 17px; }
+    .price-point em { color: var(--cyan); font-size: 11px; font-style: normal; font-weight: 600; }
 
-section{padding:90px 8%}
-.eyebrow{color:#22d3ee;text-transform:uppercase;letter-spacing:3px;font-size:11px}
-h2{font-size:clamp(30px,4vw,43px);line-height:1.2;margin:12px 0}
-.intro{color:#aab8cc;max-width:650px;margin-bottom:40px}
+    .section { padding: 90px 0; }
+    .section-heading { max-width: 720px; margin-bottom: 35px; }
+    .section-heading h2 { margin: 10px 0 12px; font-size: clamp(30px, 4vw, 43px); line-height: 1.15; letter-spacing: -1.2px; }
+    .section-heading p { max-width: 660px; color: var(--muted); font-size: 15px; }
+    .featured-offer {
+      position: relative; display: grid; grid-template-columns: 1.2fr .8fr; gap: 30px; align-items: center;
+      padding: clamp(25px, 4vw, 45px); margin: 32px 0 22px; overflow: hidden;
+      border: 1px solid rgba(34, 211, 238, .42); border-radius: 20px;
+      background: radial-gradient(ellipse at 85% 20%, rgba(82, 73, 154, .27), transparent 44%), linear-gradient(135deg, #14243a, #0c1526 78%);
+      box-shadow: 0 24px 75px rgba(0, 0, 0, .18);
+    }
+    .featured-offer::after { content: "✦"; position: absolute; top: -76px; right: 31%; color: rgba(34, 211, 238, .08); font-size: 240px; line-height: 1; pointer-events: none; }
+    .offer-label { display: inline-flex; padding: 6px 9px; border: 1px solid rgba(34, 211, 238, .3); border-radius: 999px; color: var(--cyan); font-size: 9px; letter-spacing: 1.2px; text-transform: uppercase; }
+    .offer-copy h3 { margin: 14px 0 8px; font-size: clamp(25px, 3vw, 34px); letter-spacing: -.7px; }
+    .offer-copy > p { max-width: 610px; color: #afbed2; font-size: 14px; }
+    .offer-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px 16px; margin-top: 20px; list-style: none; }
+    .offer-list li { color: #d4dfed; font-size: 11px; }
+    .offer-list li::before { content: "✓"; color: var(--cyan); font-weight: 800; margin-right: 8px; }
+    .offer-price {
+      position: relative; z-index: 1; padding: 24px; border: 1px solid rgba(161, 182, 207, .17); border-radius: 15px;
+      background: rgba(7, 14, 26, .58); text-align: center;
+    }
+    .offer-price small { color: #a7b8cd; font-size: 9px; letter-spacing: 1.7px; text-transform: uppercase; }
+    .offer-price strong { display: block; margin: 5px 0 0; color: var(--white); font-size: clamp(35px, 4vw, 48px); line-height: 1.15; }
+    .offer-price strong span { color: var(--cyan); font-size: 18px; }
+    .offer-price p { color: #a7b8cd; font-size: 10px; }
+    .offer-price .vat-total { margin: 13px 0 16px; padding-top: 12px; border-top: 1px solid rgba(161, 182, 207, .18); color: #e3ebf7; font-size: 11px; }
+    .offer-price .button { width: 100%; }
+    .cards-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .service-card {
+      min-height: 233px; display: flex; flex-direction: column; align-items: flex-start;
+      padding: 23px; border: 1px solid var(--line); border-radius: 15px;
+      background: linear-gradient(145deg, #14233a, #0d1728 78%);
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+    .service-card:hover { transform: translateY(-5px); border-color: rgba(34, 211, 238, .7); box-shadow: 0 15px 40px rgba(0, 0, 0, .22); }
+    .service-top { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .service-icon { width: 38px; height: 38px; display: grid; place-items: center; color: var(--cyan); border: 1px solid rgba(34, 211, 238, .26); border-radius: 11px; background: rgba(34, 211, 238, .07); font-size: 19px; }
+    .service-price { color: var(--cyan); font-size: 10px; font-weight: 700; text-align: right; }
+    .service-price.custom { color: #c0b4ff; }
+    .service-card h3 { margin: 17px 0 7px; font-size: 17px; line-height: 1.25; }
+    .service-card p { color: var(--muted); font-size: 12px; }
+    .service-card .card-link { margin-top: auto; padding-top: 17px; color: var(--cyan); font-size: 11px; font-weight: 700; }
+    .price-footnote { margin-top: 19px; color: #8294ac; font-size: 10px; }
+    .price-footnote strong { color: #b9c8dc; }
 
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.service-card{background:linear-gradient(145deg,#14233a,#0d1728);border:1px solid #263b58;border-radius:15px;padding:30px;transition:.3s}
-.service-card:hover{transform:translateY(-7px);border-color:#22d3ee;box-shadow:0 15px 40px #0005}
-.service-icon{font-size:35px;color:#22d3ee;margin-bottom:18px}
-.service-card h3{margin-bottom:12px;font-size:19px}
-.service-card p{color:#aab8cc;font-size:14px}
+    .creative-section { position: relative; overflow: hidden; background: linear-gradient(120deg, #101c30, #11152b); }
+    .creative-section::before { content: ""; position: absolute; width: 420px; height: 420px; top: -230px; left: -100px; border-radius: 50%; background: rgba(34, 211, 238, .08); filter: blur(4px); }
+    .creative-section .container { position: relative; }
+    .creative-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .creative-card { overflow: hidden; border: 1px solid rgba(106, 137, 173, .3); border-radius: 17px; background: rgba(7, 14, 26, .58); }
+    .creative-art { height: 215px; position: relative; display: grid; place-items: center; overflow: hidden; }
+    .creative-art.product { background: radial-gradient(circle at 50% 53%, rgba(235, 142, 72, .22), transparent 32%), linear-gradient(145deg, #17263b, #0b1322); }
+    .mini-pizza { width: 118px; height: 118px; position: relative; border: 7px solid #eaa054; border-radius: 50%; background: radial-gradient(circle, #be4034 0 12%, #f3cc65 13% 20%, #b83c32 21% 28%, #f4ca62 29% 43%, #a4372f 44% 49%, #e99b4b 50%); box-shadow: 0 0 45px rgba(245, 140, 65, .28); transform: rotate(-11deg); }
+    .mini-pizza::before, .mini-pizza::after { content: ""; position: absolute; border-radius: 50%; background: #f3c75e; box-shadow: 25px 10px 0 #af3730, -20px 32px 0 #f3c75e, 18px -28px 0 #ac3931; }
+    .mini-pizza::before { width: 11px; height: 11px; top: 20px; left: 28px; }
+    .mini-pizza::after { width: 7px; height: 7px; right: 25px; bottom: 22px; }
+    .mini-ingredient { position: absolute; width: 10px; height: 10px; border: 2px solid #f5c766; border-radius: 50%; background: #a93830; }
+    .mi-one { top: 51px; left: 72px; }.mi-two { right: 75px; bottom: 50px; }.mi-three { top: 48px; right: 65px; background: var(--cyan); border: 0; box-shadow: 0 0 12px var(--cyan); }
+    .creative-art.music { background: radial-gradient(ellipse at 50% 74%, rgba(164, 76, 226, .7), transparent 37%), linear-gradient(145deg, #111a34, #070b16); }
+    .music-orb { width: 112px; height: 112px; display: grid; place-items: center; border: 1px solid rgba(212, 184, 255, .65); border-radius: 50%; color: #e7d8ff; background: radial-gradient(circle at 40% 35%, rgba(34, 211, 238, .65), rgba(89, 59, 145, .8) 44%, rgba(10, 16, 34, .7) 72%); box-shadow: 0 0 52px rgba(155, 131, 255, .4); font-size: 31px; }
+    .music-line { position: absolute; width: 72%; height: 38px; border-top: 1px solid rgba(34, 211, 238, .75); border-radius: 50%; transform: rotate(-18deg); }
+    .music-line.two { width: 85%; border-color: rgba(155, 131, 255, .5); transform: rotate(20deg); }
+    .creative-art.memory { background: radial-gradient(ellipse at 52% 58%, rgba(222, 163, 102, .19), transparent 34%), linear-gradient(145deg, #1a2030, #0d1420); }
+    .memory-light { position: relative; width: 46px; height: 103px; border-radius: 50% 50% 18% 18%; background: linear-gradient(90deg, #ad7242, #ffe0a2 46%, #c28450); box-shadow: 0 0 36px rgba(255, 202, 119, .42); }
+    .memory-light::before { content: ""; position: absolute; width: 20px; height: 29px; left: 13px; top: -29px; border-radius: 55% 45% 60% 40%; background: radial-gradient(ellipse at 40% 75%, #fff3bd, #ff9f50 58%, transparent 62%); transform: rotate(7deg); }
+    .memory-ring { position: absolute; width: 188px; height: 188px; border: 1px solid rgba(255, 219, 167, .22); border-radius: 50%; }
+    .creative-copy { padding: 20px; }
+    .creative-copy small { color: var(--cyan); font-size: 9px; letter-spacing: 1.4px; text-transform: uppercase; }
+    .creative-copy h3 { margin: 7px 0 5px; font-size: 17px; }
+    .creative-copy p { color: var(--muted); font-size: 12px; }
+    .concept-note { margin-top: 19px; color: #8294ac; font-size: 10px; }
 
-.about{background:linear-gradient(120deg,#101c30,#11152b);text-align:center}
-.about p{max-width:760px;margin:20px auto;color:#b8c6d9}
+    .how-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 34px; }
+    .how-card { position: relative; padding: 20px; border: 1px solid var(--line); border-radius: 13px; background: linear-gradient(145deg, #14233a, #0d1728); }
+    .how-card b { display: block; color: var(--cyan); font-size: 10px; letter-spacing: 1px; }
+    .how-card h3 { margin: 9px 0 5px; font-size: 15px; }
+    .how-card p { color: var(--muted); font-size: 11px; }
 
+    .about-band { padding: 68px 0; text-align: center; background: linear-gradient(100deg, rgba(34, 211, 238, .06), rgba(155, 131, 255, .08)); border-top: 1px solid rgba(117, 145, 180, .14); border-bottom: 1px solid rgba(117, 145, 180, .14); }
+    .about-band p { max-width: 740px; margin: 12px auto 0; color: #b8c6d9; font-size: 14px; }
 
-.portfolio-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:24px;
-}
+    .faq-list { max-width: 850px; margin: 32px auto 0; }
+    .faq-item { margin-bottom: 12px; padding: 19px 22px; border: 1px solid var(--line); border-radius: 12px; background: linear-gradient(145deg, #14233a, #0d1728); }
+    .faq-item summary { position: relative; padding-right: 28px; color: var(--white); font-size: 13px; font-weight: 700; cursor: pointer; list-style: none; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: "+"; position: absolute; right: 0; top: -4px; color: var(--cyan); font-size: 21px; }
+    .faq-item[open] summary::after { content: "−"; }
+    .faq-item p { margin-top: 12px; color: var(--muted); font-size: 12px; }
 
-.portfolio-card{
-  overflow:hidden;
-  border:1px solid #263b58;
-  border-radius:18px;
-  background:linear-gradient(145deg,#14233a,#0b1424);
-  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
-}
+    .contact-section { padding: 80px 0; background: radial-gradient(ellipse at 50% 0, rgba(28, 104, 143, .2), transparent 50%), #0d1626; text-align: center; }
+    .contact-box { max-width: 760px; margin: auto; }
+    .contact-box h2 { margin: 10px 0; font-size: clamp(30px, 4vw, 45px); line-height: 1.13; }
+    .contact-box p { max-width: 570px; margin: 0 auto; color: var(--muted); font-size: 14px; }
+    .contact-box .button { margin-top: 23px; }
+    .contact-details { margin-top: 15px; color: #91a4bd; font-size: 11px; }
+    footer { padding: 22px 0; border-top: 1px solid rgba(117, 145, 180, .16); color: #8294ac; font-size: 10px; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .footer-inner a { color: #b8c6d9; }
+    .footer-inner a:hover { color: var(--cyan); }
+    :focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
 
-.portfolio-card:hover{
-  transform:translateY(-9px);
-  border-color:#22d3ee;
-  box-shadow:0 15px 40px #22d3ee22,0 0 25px #8b5cf633;
-}
-
-.portfolio-art{
-  height:210px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:75px;
-  position:relative;
-  overflow:hidden;
-  transition:transform .5s ease,filter .5s ease;
-}
-  .portfolio-art img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform .5s ease;
-}
-
-.portfolio-card:hover .portfolio-art img {
-  transform: scale(1.05);
-}
-
-.portfolio-card:hover .portfolio-art{
-  transform:scale(1.04);
-  filter:brightness(1.18);
-}
-
-.art-one{
-  background:radial-gradient(circle,#267ca5,#14294b 55%,#0b1120);
-}
-
-.art-two{
-  background:radial-gradient(circle,#7952bd,#29204c 55%,#0b1120);
-}
-
-.art-three{
-  background:radial-gradient(circle,#168a9b,#17314c 55%,#0b1120);
-}
-
-.portfolio-info{padding:23px}
-.portfolio-info small{color:#22d3ee;letter-spacing:2px;text-transform:uppercase}
-.portfolio-info h3{margin:9px 0}
-.portfolio-info p{color:#aab8cc;font-size:14px}
-
-
-/* PREGUNTAS FRECUENTES */
-#preguntas{padding:90px 8%}
-.faq-list{max-width:850px;margin:35px auto 0}
-.faq-item{background:linear-gradient(145deg,#14233a,#0d1728);border:1px solid #263b58;border-radius:14px;margin-bottom:15px;padding:22px 25px;transition:.3s}
-.faq-item:hover{border-color:#22d3ee;box-shadow:0 8px 25px #0004}
-.faq-item summary{color:#fff;font-weight:600;cursor:pointer;list-style:none;position:relative;padding-right:30px}
-.faq-item summary::-webkit-details-marker{display:none}
-.faq-item summary::after{content:"+";color:#22d3ee;font-size:24px;position:absolute;right:0;top:-5px}
-.faq-item[open] summary::after{content:"−"}
-.faq-item p{color:#aab8cc;line-height:1.7;margin-top:18px}
-
-.contact{text-align:center;background:#101a2b}
-.contact p{color:#b8c6d9}
-footer{text-align:center;padding:28px;color:#8595ad;border-top:1px solid #26334b;font-size:13px}
-
-@media(max-width:700px){
- header{height:auto;padding:20px 5%;gap:15px;flex-direction:column}
- nav{gap:15px;flex-wrap:wrap;justify-content:center}
- .hero{min-height:570px;padding:75px 6%}
- .hero:after{width:220px;height:220px;right:-50px;top:48%;opacity:.45}
- section{padding:70px 6%}
-}
-</style>
+    @media (max-width: 980px) {
+      .main-nav { gap: 14px; }
+      .main-nav a { font-size: 11px; }
+      .hero-grid { gap: 18px; }
+      .visual-stage { transform: scale(.91); transform-origin: center right; }
+      .cards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 760px) {
+      .container { width: min(var(--max), calc(100% - 36px)); }
+      .header-inner { min-height: 70px; flex-wrap: wrap; gap: 10px; padding: 6px 0; }
+      .brand-logo { width: 108px; height: 72px; }
+      .menu-toggle { display: block; margin-left: auto; }
+      .header-cta { padding: 10px 12px; font-size: 11px; }
+      .main-nav { display: none; order: 4; width: 100%; padding: 8px 0 5px; flex-wrap: wrap; justify-content: center; }
+      .main-nav.open { display: flex; }
+      .main-nav a { padding: 6px; font-size: 12px; }
+      .hero { min-height: unset; padding: 65px 0 55px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 0; }
+      .hero h1 { max-width: 620px; font-size: clamp(43px, 11vw, 65px); }
+      .hero-copy { max-width: 600px; font-size: 16px; }
+      .visual-stage { width: 100%; min-height: 365px; margin: 8px auto -5px; transform: scale(.88); transform-origin: center; }
+      .price-ribbon-inner { grid-template-columns: repeat(2, 1fr); }
+      .price-point { padding: 15px 12px; border-bottom: 1px solid rgba(117, 145, 180, .14); }
+      .price-point:first-child { padding-left: 12px; }
+      .price-point:nth-child(2) { border-right: 0; }
+      .price-point:nth-child(3), .price-point:nth-child(4) { border-bottom: 0; }
+      .section { padding: 68px 0; }
+      .featured-offer { grid-template-columns: 1fr; }
+      .offer-price { max-width: 430px; width: 100%; margin: 0 auto; }
+      .creative-grid { grid-template-columns: 1fr; }
+      .creative-card { display: grid; grid-template-columns: .85fr 1fr; }
+      .creative-art { height: 185px; }
+      .creative-copy { align-self: center; padding: 18px; }
+      .how-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 520px) {
+      .container { width: calc(100% - 30px); }
+      .brand-main { font-size: 20px; }
+      .hero { padding-top: 52px; }
+      .hero h1 { letter-spacing: -1.8px; }
+      .hero-actions { gap: 9px; }
+      .hero-actions .button { width: 100%; }
+      .visual-stage { min-height: 323px; margin-top: 0; transform: scale(.77); width: 125%; margin-left: -12.5%; margin-bottom: -22px; }
+      .stage-caption { right: 42px; }
+      .price-point strong { font-size: 15px; }
+      .price-point span { font-size: 8px; letter-spacing: .9px; }
+      .section-heading h2 { font-size: 31px; }
+      .featured-offer { padding: 22px 18px; }
+      .offer-list { grid-template-columns: 1fr; gap: 5px; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .service-card { min-height: 200px; }
+      .creative-card { grid-template-columns: 1fr; }
+      .creative-art { height: 205px; }
+      .how-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+  </style>
 </head>
-
 <body>
-<header>
-  <div class="logo">NEXO<span>.</span></div>
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#nosotros">Estudio</a>
-    <a href="#preguntas">Preguntas frecuentes</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-</header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Nexo Digital Studio, inicio">
+        <img class="brand-logo" src="assets/Nexo_Digital_Studio_Logo.png" alt="Nexo Digital Studio. Imaginamos. Creamos el futuro.">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menú</button>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="#servicios">Servicios y precios</a>
+        <a href="#ideas">Ideas visuales</a>
+        <a href="#proceso">Cómo trabajamos</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <a class="header-cta" href="mailto:cheburek3585@gmail.com?subject=Quiero%20una%20propuesta%20de%20Nexo">Pedir propuesta <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
 
-<main>
-<section class="hero" id="inicio">
- <div class="hero-content">
-  <div class="tag">Digital Studio · AI · Creative Technology</div>
-  <h1>Imaginamos.<br><span class="gradient">Creamos el futuro.</span></h1>
-  <p>Unimos inteligencia artificial, diseño 3D y marketing digital para convertir ideas en experiencias digitales.</p>
-  <a class="button" href="#servicios">Explorar servicios →</a>
- </div>
-</section>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow">Vídeo · Inteligencia artificial · 3D</div>
+          <h1>Dale forma.<br><span class="gradient-text">Haz que se recuerde.</span></h1>
+          <p class="hero-copy">Publicidad que detiene el scroll: vídeos, imágenes de producto y experiencias digitales para llevar tu idea al mundo real.</p>
+          <div class="hero-actions">
+            <a class="button" href="#servicios">Ver servicios y precios <span aria-hidden="true">↓</span></a>
+            <a class="button secondary" href="mailto:cheburek3585@gmail.com?subject=Hablemos%20de%20mi%20proyecto">Cuéntanos tu idea</a>
+          </div>
+          <p class="hero-note"><strong>Desde una imagen hasta una campaña completa.</strong> Creatividad pensada para negocios, marcas y personas.</p>
+        </div>
 
-<section id="servicios">
-  <div class="eyebrow">Qué hacemos · Nuestras soluciones</div>
-  <h2>Tecnología al servicio de tus ideas.</h2>
-  <p class="intro">Combinamos creatividad, estrategia y tecnología para impulsar proyectos y negocios.</p>
-  <div class="services-grid">
-    <article class="service-card">
-      <div class="service-icon">✦</div>
-      <h3>Inteligencia Artificial</h3>
-      <p>Soluciones creativas, automatización y herramientas inteligentes para transformar procesos y generar nuevas oportunidades.</p>
-    </article>
-    <article class="service-card">
-      <div class="service-icon">◇</div>
-      <h3>Visualización 3D</h3>
-      <p>Convertimos espacios, objetos y conceptos en representaciones digitales realistas y experiencias visuales.</p>
-    </article>
-    <article class="service-card">
-      <div class="service-icon">◎</div>
-      <h3>Marketing Digital</h3>
-      <p>Estrategia digital, contenidos y gestión de redes sociales para mejorar la presencia de tu marca.</p>
-    </article>
-    <article class="service-card">
-      <div class="service-icon">⌘</div>
-      <h3>Diseño Web</h3>
-      <p>Diseñamos páginas web modernas, atractivas, rápidas y adaptadas a todos los dispositivos.</p>
-    </article>
-  </div>
-</section>
-
-
-<section id="proyectos">
-  <div class="eyebrow">Nuestro universo creativo · Portfolio</div>
-  <h2>Ideas que toman forma.</h2>
-  <p class="intro">
-    Exploramos nuevas formas de conectar el mundo real con las posibilidades del universo digital.
-  </p>
-
-  <div class="portfolio-grid">
-
-    <article class="portfolio-card">
-      <div class="portfolio-art art-one">
-  <img
-    src="digital-twin.png"
-    alt="Arquitectura 3D de una villa moderna con gemelo digital"
-  />
-</div>
-      <div class="portfolio-info">
-        <h3>Digital Twin</h3>
-        <p>Representación digital de espacios y arquitectura mediante visualización 3D realista.</p>
+        <div class="visual-stage" aria-label="Ilustración conceptual de una pizza con vista descompuesta y efecto food splash">
+          <div class="stage-halo"></div><div class="orbit"></div><div class="orbit two"></div>
+          <div class="floating-tag one"><strong>FOOD SPLASH</strong> · movimiento</div>
+          <div class="product-window">
+            <div class="window-top"><span>AI PRODUCT LAB</span><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+            <div class="pizza-art" aria-hidden="true">
+              <span class="pizza-glow"></span><span class="pizza-disc"></span>
+              <i class="topping t1"></i><i class="topping t2"></i><i class="topping t3"></i><i class="topping t4"></i>
+              <i class="splash s1"></i><i class="splash s2"></i><i class="splash s3"></i>
+              <span class="layer-tag left">ingredientes</span><span class="layer-tag right">capas separadas</span>
+            </div>
+            <div class="window-caption"><span>Del antojo a la imagen</span><b>VISTA DESCOMPUESTA</b></div>
+          </div>
+          <div class="floating-tag two"><strong>IA + 3D</strong> · una idea, muchos formatos</div>
+          <span class="stage-caption">Ilustración conceptual</span>
+        </div>
       </div>
-    </article>
+    </section>
 
-    <article class="portfolio-card">
-      <div class="portfolio-art art-two">
-  <img
-    src="ai-creative-lab-16x9.png"
-    alt="Inteligencia artificial y colaboración entre humanos y robots"
-  />
-</div>
-      <div class="portfolio-info">
-        <h3>AI Creative Lab</h3>
-        <p>Creatividad visual impulsada por inteligencia artificial para desarrollar conceptos e imágenes.</p>
+    <div class="price-ribbon" aria-label="Precios iniciales">
+      <div class="container price-ribbon-inner">
+        <div class="price-point"><span>Imagen publicitaria</span><strong>35 € <em>+ IVA</em></strong></div>
+        <div class="price-point"><span>Vídeo promocional con IA</span><strong>120 € <em>+ IVA</em></strong></div>
+        <div class="price-point"><span>Render 3D interior</span><strong>90 € <em>+ IVA</em></strong></div>
+        <div class="price-point"><span>Landing page</span><strong>250 € <em>+ IVA</em></strong></div>
       </div>
-    </article>
+    </div>
 
-    <article class="portfolio-card">
-      <div class="portfolio-art art-three">
-        <span>03 · PRODUCTO 3D</span>
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Servicios · alcance y precios</div>
+          <h2>Elige lo que necesitas.<br><span class="gradient-text">Empieza con un precio claro.</span></h2>
+          <p>Desde una pieza llamativa hasta una campaña completa. Cuéntanos el objetivo y te ayudamos a escoger el formato adecuado.</p>
+        </div>
+
+        <article class="featured-offer">
+          <div class="offer-copy">
+            <span class="offer-label">Precio introductorio propuesto · campaña de producto</span>
+            <h3>NEXO PRODUCT BOOST</h3>
+            <p>Convertimos las fotos y los datos de tu producto en un pequeño kit publicitario coordinado, listo para revisar y compartir.</p>
+            <ul class="offer-list">
+              <li>3 imágenes publicitarias</li>
+              <li>1 vista descompuesta del producto</li>
+              <li>1 vídeo vertical de hasta 15 segundos</li>
+              <li>3 diseños para redes sociales</li>
+              <li>Texto publicitario con llamada a la acción</li>
+            </ul>
+          </div>
+          <div class="offer-price">
+            <small>Paquete completo</small>
+            <strong>149 € <span>+ IVA</span></strong>
+            <p class="vat-total">149,00 € + 31,29 € de IVA = <b>180,29 € total</b></p>
+            <a class="button" href="mailto:cheburek3585@gmail.com?subject=Quiero%20Nexo%20Product%20Boost">Quiero lanzar mi producto <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <div class="cards-grid">
+          <article class="service-card">
+            <div class="service-top"><span class="service-icon" aria-hidden="true">▶</span><span class="service-price">Desde 120 € + IVA</span></div>
+            <h3>Vídeo promocional con IA</h3>
+            <p>Una pieza breve para presentar un producto, servicio o negocio. Vídeos publicitarios avanzados desde 250 € + IVA.</p>
+            <a class="card-link" href="mailto:cheburek3585@gmail.com?subject=Video%20promocional">Pedir una propuesta ↗</a>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span class="service-icon" aria-hidden="true">♫</span><span class="service-price custom">A medida</span></div>
+            <h3>Vídeo musical</h3>
+            <p>Un concepto visual propio para acompañar tu música, desde la dirección creativa hasta una pieza audiovisual coordinada.</p>
+            <a class="card-link" href="mailto:cheburek3585@gmail.com?subject=Video%20musical">Cuéntanos el concepto ↗</a>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span class="service-icon" aria-hidden="true">✧</span><span class="service-price custom">A medida</span></div>
+            <h3>Homenajes audiovisuales</h3>
+            <p>Piezas conmemorativas para funerarias y familias, creadas con cuidado a partir de fotografías, música e información aprobadas por ellas.</p>
+            <a class="card-link" href="mailto:cheburek3585@gmail.com?subject=Homenaje%20audiovisual">Hablar con sensibilidad ↗</a>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span class="service-icon" aria-hidden="true">✦</span><span class="service-price">Desde 35 € + IVA</span></div>
+            <h3>Imágenes y efectos de producto</h3>
+            <p>Imágenes publicitarias, ingredientes en movimiento, food splash y vistas descompuestas para mostrar capas y componentes.</p>
+            <a class="card-link" href="mailto:cheburek3585@gmail.com?subject=Imagen%20publicitaria%20de%20producto">Crear una imagen ↗</a>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span class="service-icon" aria-hidden="true">◇</span><span class="service-price">Desde 90 € + IVA</span></div>
+            <h3>Visualización 3D</h3>
+            <p>Renders de interiores desde 90 € y exteriores desde 140 € + IVA. Visualiza espacios, productos y conceptos antes de producirlos.</p>
+            <a class="card-link" href="mailto:cheburek3585@gmail.com?subject=Visualizacion%203D">Explorar una idea 3D ↗</a>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span class="service-icon" aria-hidden="true">⌘</span><span class="service-price">Desde 65 € + IVA</span></div>
+            <h3>Redes sociales y diseño web</h3>
+            <p>5 publicaciones para redes desde 65 €. Landing page desde 250 €. Diseños digitales claros y adaptados a tu marca.</p>
+            <a class="card-link" href="mailto:cheburek3585@gmail.com?subject=Redes%20sociales%20o%20web">Mejorar mi presencia digital ↗</a>
+          </article>
+        </div>
+        <p class="price-footnote"><strong>Precios base en euros, IVA no incluido salvo indicación expresa.</strong> Los servicios a medida se presupuestan según el alcance. El gasto en anuncios, licencias de terceros, producción física y revisiones extra no están incluidos salvo acuerdo previo.</p>
       </div>
-      <div class="portfolio-info">
-        <h3>Product Vision</h3>
-        <p>Presentación digital de productos con imágenes 3D, materiales y acabados realistas.</p>
+    </section>
+
+    <section class="section creative-section" id="ideas">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">La creatividad de la IA, aplicada a tu historia</div>
+          <h2>Hay más de una forma<br>de captar una mirada.</h2>
+          <p>Despieces de producto, movimiento, música o memoria: elegimos el lenguaje visual según lo que quieras comunicar.</p>
+        </div>
+        <div class="creative-grid">
+          <article class="creative-card">
+            <div class="creative-art product" aria-label="Ilustración conceptual de una pizza con ingredientes separados">
+              <span class="mini-pizza"></span><i class="mini-ingredient mi-one"></i><i class="mini-ingredient mi-two"></i><i class="mini-ingredient mi-three"></i>
+            </div>
+            <div class="creative-copy"><small>Producto · Exploded view + food splash</small><h3>Que se vea cada capa.</h3><p>Ingredientes y componentes se separan o entran en escena para convertir el producto en el protagonista.</p></div>
+          </article>
+          <article class="creative-card">
+            <div class="creative-art music" aria-label="Ilustración abstracta de un universo musical digital"><span class="music-line"></span><span class="music-line two"></span><span class="music-orb" aria-hidden="true">♫</span></div>
+            <div class="creative-copy"><small>Música · Vídeo</small><h3>Una canción. Un universo visual.</h3><p>Construimos una dirección visual para que imagen, ritmo y atmósfera acompañen tu sonido.</p></div>
+          </article>
+          <article class="creative-card">
+            <div class="creative-art memory" aria-label="Ilustración serena de una luz conmemorativa"><span class="memory-ring"></span><span class="memory-light"></span></div>
+            <div class="creative-copy"><small>Memoria · Homenaje</small><h3>Contar una vida con respeto.</h3><p>Un recuerdo audiovisual cuidado, creado junto a la familia y la funeraria.</p></div>
+          </article>
+        </div>
+        <p class="concept-note">Las ilustraciones de esta página son conceptos visuales, no proyectos realizados para clientes.</p>
       </div>
-    </article>
+    </section>
 
-  </div>
+    <section class="section" id="proceso">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">De la idea a la entrega</div>
+          <h2>Un proceso sencillo.<br><span class="gradient-text">Un resultado pensado para ti.</span></h2>
+          <p>Trabajamos contigo para definir el mensaje, producir las piezas y revisar los detalles antes de la entrega.</p>
+        </div>
+        <div class="how-grid">
+          <article class="how-card"><b>01 · NOS CUENTAS</b><h3>Objetivo y público</h3><p>Qué ofreces, a quién quieres llegar y dónde se verá la pieza.</p></article>
+          <article class="how-card"><b>02 · PREPARAMOS</b><h3>Idea y materiales</h3><p>Acordamos el enfoque y recibimos fotos, logotipo e información.</p></article>
+          <article class="how-card"><b>03 · CREAMOS</b><h3>Producción y revisión</h3><p>Preparamos las piezas y aplicamos la ronda de ajustes acordada.</p></article>
+          <article class="how-card"><b>04 · ENTREGAMOS</b><h3>Archivos digitales</h3><p>Recibes los formatos pactados, listos para tus canales.</p></article>
+        </div>
+      </div>
+    </section>
 
-  <p class="intro">
-    Proyectos conceptuales de demostración. No representan encargos realizados para clientes.
-  </p>
-</section>
+    <section class="about-band">
+      <div class="container">
+        <div class="eyebrow">Nexo Digital Studio</div>
+        <h2>Imaginamos. Creamos el futuro.</h2>
+        <p>Acercamos creatividad digital, inteligencia artificial y visualización 3D a negocios, artistas y proyectos que quieren contar algo de forma distinta.</p>
+      </div>
+    </section>
 
+    <section class="section" id="preguntas">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Antes de empezar</div>
+          <h2>Preguntas frecuentes.</h2>
+          <p>Lo esencial para saber qué pedir y cómo preparar tu proyecto.</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item"><summary>¿Qué diferencia hay entre exploded view y food splash?</summary><p>En una <em>exploded view</em>, las capas o componentes aparecen separados para mostrar cómo se compone el producto. En un <em>food splash</em>, ingredientes o líquidos parecen salpicar o moverse alrededor. Se pueden combinar en una imagen o un vídeo.</p></details>
+          <details class="faq-item"><summary>¿Qué tengo que enviar para crear una campaña de producto?</summary><p>Fotos claras del producto, el logotipo si tienes uno y los datos que quieras comunicar. Antes de publicar, revisas y confirmas nombres, ingredientes, materiales, precios y cualquier afirmación.</p></details>
+          <details class="faq-item"><summary>¿El precio de Nexo Product Boost incluye IVA?</summary><p>El precio base es 149,00 €. Con el 21 % de IVA (31,29 €), el total es 180,29 €. Los demás precios “desde” de la web se indican antes de IVA.</p></details>
+          <details class="faq-item"><summary>¿Los vídeos musicales y homenajes tienen un precio fijo?</summary><p>Se preparan a medida según duración, materiales, estilo y alcance. En los homenajes audiovisuales, el contenido y las imágenes se trabajan con autorización y aprobación de la familia o de quien la represente.</p></details>
+          <details class="faq-item"><summary>¿Se incluye la inversión en anuncios o la impresión?</summary><p>No. El gasto de publicidad en plataformas, la producción física y las licencias de terceros se presupuestan aparte si el proyecto las necesita.</p></details>
+        </div>
+      </div>
+    </section>
 
-<section class="about" id="nosotros">
- <div class="eyebrow">Nexo Digital Studio</div>
- <h2>Conectamos ideas y tecnología.</h2>
- <p>Somos un proyecto creativo en desarrollo que explora nuevas posibilidades entre el mundo físico y el digital. Nuestra visión es acercar herramientas tecnológicas a proyectos de cualquier tamaño.</p>
-</section>
+    <section class="contact-section" id="contacto">
+      <div class="container contact-box">
+        <div class="eyebrow">Hablemos de lo que quieres crear</div>
+        <h2>Tu próxima idea<br><span class="gradient-text">puede empezar hoy.</span></h2>
+        <p>Cuéntanos qué quieres promocionar, presentar o recordar. Te responderemos con el formato y el alcance que mejor encajen.</p>
+        <a class="button" href="mailto:cheburek3585@gmail.com?subject=Quiero%20crear%20con%20Nexo">Escribir a Nexo Digital Studio <span aria-hidden="true">↗</span></a>
+        <div class="contact-details"><a href="mailto:cheburek3585@gmail.com">cheburek3585@gmail.com</a></div>
+      </div>
+    </section>
+  </main>
 
-<section id="preguntas">
-  <div class="eyebrow">Resolvemos tus dudas</div>
-  <h2>Preguntas frecuentes.</h2>
-  <p class="intro">Conoce mejor Nexo Digital Studio y nuestra forma de trabajar.</p>
-  <div class="faq-list">
-    <details class="faq-item">
-      <summary>¿Qué servicios ofrece Nexo Digital Studio?</summary>
-      <p>Trabajamos en soluciones de inteligencia artificial, visualización 3D, marketing digital y diseño web.</p>
-    </details>
-    <details class="faq-item">
-      <summary>¿Con qué tipo de clientes trabajamos?</summary>
-      <p>Queremos ayudar a emprendedores, profesionales y empresas de distintos sectores a desarrollar sus ideas.</p>
-    </details>
-    <details class="faq-item">
-      <summary>¿Cómo puedo solicitar un proyecto?</summary>
-      <p>Puedes escribirnos desde la sección de contacto y contarnos tu idea o necesidad.</p>
-    </details>
-    <details class="faq-item">
-      <summary>¿Cómo se calcula el presupuesto?</summary>
-      <p>Cada proyecto es diferente. Estudiaremos tus necesidades para valorar su alcance y preparar una propuesta.</p>
-    </details>
-  </div>
-</section>
-
-<section class="contact" id="contacto">
- <div class="eyebrow">Hablemos</div>
- <h2>Tu próxima idea empieza aquí.</h2>
- <p>¿Tienes un proyecto o una propuesta? Escríbenos.</p>
- <a class="button" href="mailto:cheburek3585@gmail.com">Contactar →</a>
-</section>
-</main>
-
-<footer>© 2026 Nexo Digital Studio · Proyecto creativo en desarrollo</footer>
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Nexo Digital Studio · Imaginamos. Creamos el futuro.</span>
+      <a href="mailto:cheburek3585@gmail.com">Contacto</a>
+      <span>Precios base en euros · IVA indicado por separado</span>
+    </div>
+  </footer>
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('#main-nav');
+    menuButton.addEventListener('click', () => {
+      const open = menuButton.getAttribute('aria-expanded') !== 'true';
+      menuButton.setAttribute('aria-expanded', String(open));
+      mainNav.classList.toggle('open', open);
+    });
+    mainNav.addEventListener('click', event => {
+      if (event.target.closest('a')) {
+        menuButton.setAttribute('aria-expanded', 'false');
+        mainNav.classList.remove('open');
+      }
+    });
+  </script>
 </body>
 </html>
