@@ -215,15 +215,22 @@
     .music-line { position: absolute; width: 72%; height: 38px; border-top: 1px solid rgba(34, 211, 238, .75); border-radius: 50%; transform: rotate(-18deg); }
     .music-line.two { width: 85%; border-color: rgba(155, 131, 255, .5); transform: rotate(20deg); }
     .creative-art.memory { background: radial-gradient(ellipse at 52% 58%, rgba(222, 163, 102, .19), transparent 34%), linear-gradient(145deg, #1a2030, #0d1420); }
+    .creative-card.creative-card-memory {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
     .creative-art.memory {
-      height: 360px;
+      width: min(100%, 225px);
+      height: auto;
+      aspect-ratio: 9 / 16;
+      margin-inline: auto;
       background: #080d19;
     }
     .creative-art.memory video {
-      width: auto;
-      max-width: 100%;
+      display: block;
+      width: 100%;
       height: 100%;
-      aspect-ratio: 9 / 16;
       object-fit: contain;
       background: #000;
     }
@@ -332,7 +339,7 @@
       .service-card { min-height: 200px; }
       .creative-card { grid-template-columns: 1fr; }
       .creative-art { height: 205px; }
-      .creative-art.memory { height: min(420px, 115vw); }
+
       .how-grid { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; text-align: center; }
     }
@@ -527,7 +534,7 @@
             <div class="creative-art music"><video controls playsinline preload="metadata" aria-label="Videoclip musical"><source src="video.mp4" type="video/mp4">Tu navegador no puede reproducir este vídeo.</video></div>
             <div class="creative-copy"><small>Música · Vídeo</small><h3>Una canción. Un universo visual.</h3><p>Construimos una dirección visual para que imagen, ritmo y atmósfera acompañen tu sonido.</p></div>
           </article>
-          <article class="creative-card">
+          <article class="creative-card creative-card-memory">
             <div class="creative-art memory"><video controls playsinline preload="metadata" aria-label="Vídeo vertical conmemorativo"><source src="jm.mp4" type="video/mp4">Tu navegador no puede reproducir este vídeo.</video></div>
             <div class="creative-copy"><small>Memoria · Homenaje</small><h3>Contar una vida con respeto.</h3><p>Un recuerdo audiovisual cuidado, creado junto a la familia y la funeraria.</p></div>
           </article>
@@ -595,7 +602,7 @@
       <span>Precios base en euros · IVA indicado por separado</span>
     </div>
   </footer>
-  <audio id="background-audio" autoplay loop preload="auto">
+  <audio id="background-audio" autoplay preload="auto">
     <source src="musica_fondo.mp3" type="audio/mpeg">
   </audio>
   <button class="audio-toggle" id="audio-toggle" type="button" aria-label="Activar música de fondo" aria-pressed="false">♫ Activar música</button>
