@@ -11,15 +11,13 @@
   <title>Nexo Digital Studio | Vídeo, IA y creatividad 3D</title>
   <style>
     .service-gif {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  margin: 16px 0 2px;
-  border-radius: 10px;
-}
-    <img class="service-gif" src="video_musical.gif"
-     alt="Vídeo musical" loading="lazy">
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      margin: 16px 0 2px;
+      border-radius: 10px;
+    }
     :root {
       color-scheme: dark;
       --bg: #080d19;
@@ -198,6 +196,13 @@
     .creative-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
     .creative-card { overflow: hidden; border: 1px solid rgba(106, 137, 173, .3); border-radius: 17px; background: rgba(7, 14, 26, .58); }
     .creative-art { height: 215px; position: relative; display: grid; place-items: center; overflow: hidden; }
+    .creative-art img,
+    .creative-art video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
     .creative-art.product { background: radial-gradient(circle at 50% 53%, rgba(235, 142, 72, .22), transparent 32%), linear-gradient(145deg, #17263b, #0b1322); }
     .mini-pizza { width: 118px; height: 118px; position: relative; border: 7px solid #eaa054; border-radius: 50%; background: radial-gradient(circle, #be4034 0 12%, #f3cc65 13% 20%, #b83c32 21% 28%, #f4ca62 29% 43%, #a4372f 44% 49%, #e99b4b 50%); box-shadow: 0 0 45px rgba(245, 140, 65, .28); transform: rotate(-11deg); }
     .mini-pizza::before, .mini-pizza::after { content: ""; position: absolute; border-radius: 50%; background: #f3c75e; box-shadow: 25px 10px 0 #af3730, -20px 32px 0 #f3c75e, 18px -28px 0 #ac3931; }
@@ -334,9 +339,9 @@
     <section class="hero" id="inicio">
       <div class="container hero-grid">
         <div class="hero-content">
-          <div class="eyebrow">IA · VÍDEO · RECORRIDOS 3D · EXPERIENCIAS DIGITALES</div>
-          <h1>Lo real<br><span class="gradient-text">Cobra vida en digital.</span></h1>
-          <p class="hero-copy">Llevamos tus productos, al mundo digital para destacar en redes. lleva tu idea al mundo real</p>
+          <div class="eyebrow">VÍDEO · IA · 3D · EXPERIENCIAS DIGITALES</div>
+          <h1>Lo real<br><span class="gradient-text">cobra vida en digital.</span></h1>
+          <p class="hero-copy">Convertimos tus productos, espacios e ideas en imágenes, vídeos y experiencias 3D que hacen parar el scroll y ponen tu marca en primer plano.</p>
           <div class="hero-actions">
             <a class="button" href="#servicios">Ver servicios y precios <span aria-hidden="true">↓</span></a>
             <a class="button secondary" href="mailto:cheburek3585@gmail.com?subject=Hablemos%20de%20mi%20proyecto">Cuéntanos tu idea</a>
@@ -409,10 +414,9 @@
             <h3>NEXO LANZAMIENTO DE PRODUCTO</h3>
             <p>Convertimos las fotos y los datos de tu producto en un pequeño kit publicitario coordinado, listo para revisar y compartir.</p>
             <ul class="offer-list">
-              <li>3 imágenes publicitarias, IMPACTO, DETALLE, OFERTA.</li>
+              <li>3 diseños publicitarios para redes: presentación, beneficios y oferta</li>
               <li>1 vista descompuesta del producto</li>
               <li>1 vídeo vertical de hasta 15 segundos</li>
-              <li>3 diseños para redes sociales </li>
               <li>Texto publicitario con llamada a la acción</li>
             </ul>
           </div>
@@ -420,37 +424,31 @@
             <small>Paquete completo</small>
             <strong>149 € <span>+ IVA</span></strong>
             <p class="vat-total">149,00 € + 31,29 € de IVA = <b>180,29 € total</b></p>
-            <a class="button" href="mailto:cheburek3585@gmail.com?subject=Quiero%20Nexo%20Product%20Boost">Quiero lanzar mi producto <span aria-hidden="true">↗</span></a>
+            <a class="button" href="mailto:cheburek3585@gmail.com?subject=Quiero%20Nexo%20Lanzamiento%20de%20Producto">Quiero lanzar mi producto <span aria-hidden="true">↗</span></a>
           </div>
         </article>
 
         <div class="cards-grid">
           <article class="service-card">
-            <div class="service-top"><span class="service-icon" aria-hidden="true">▶</span><span class="service-price">Desde 120 € + IVA</span></div>
-            <img class="service-gif" src="video_musical.gif" alt="Vídeo musical" loading="lazy">
-            
-            <img class="service-gif"
-     src="video_promo_tienda_ropa.gif"
-     alt="Vídeo promocional de una tienda de ropa"
-     loading="lazy">
-            <h3>Vídeo promocional con IA</h3>
-            <p>Una pieza breve para presentar un producto, servicio o negocio. Vídeos publicitarios avanzados desde 250 € + IVA.</p>
-            <a class="card-link" href="mailto:cheburek3585@gmail.com?subject=Video%20promocional">Pedir una propuesta ↗</a>
-          </article>
+  <div class="service-top"><span class="service-icon" aria-hidden="true">▶</span><span class="service-price">Desde 120 € + IVA</span></div>
+  <img class="service-gif" src="video_promo_tienda_ropa.gif" alt="Vídeo promocional de una tienda de ropa" loading="lazy">
+  <h3>Vídeo promocional con IA</h3>
+  <p>Una pieza breve para presentar un producto, servicio o negocio. Vídeos publicitarios avanzados desde 250 € + IVA.</p>
+  <a class="card-link" href="mailto:cheburek3585@gmail.com?subject=Video%20promocional">Pedir una propuesta ↗</a>
+</article>
           <article class="service-card">
-            <div class="service-top"><span class="service-icon" aria-hidden="true">♫</span><span class="service-price custom">A medida</span></div>
-            <h3>Vídeo musical</h3>
-            <p>Un concepto visual propio para acompañar tu música, desde la dirección creativa hasta una pieza audiovisual coordinada, 
-              Creamos música original para acompañar vídeos, campañas, marcas y proyectos especiales, adaptada al estilo y la emoción que quieres transmitir..</p>
-            <a class="card-link" href="mailto:cheburek3585@gmail.com?subject=Video%20musical">Cuéntanos el concepto ↗</a>
-          </article>
+  <div class="service-top"><span class="service-icon" aria-hidden="true">♫</span><span class="service-price custom">A medida</span></div>
+  <img class="service-gif" src="video_musical.gif" alt="Videoclip musical" loading="lazy">
+  <h3>Vídeo musical</h3>
+  <p>Creamos videoclips y música original a medida para acompañar tu canción, desde la idea visual hasta la pieza audiovisual final.</p>
+  <a class="card-link" href="mailto:cheburek3585@gmail.com?subject=Video%20musical">Cuéntanos el concepto ↗</a>
+</article>
           <article class="service-card">
-            <div class="service-top"><span class="service-icon" aria-hidden="true">✧</span><span class="service-price custom">A medida</span></div>
-            <h3>Homenajes audiovisuales</h3>
-            <p>Piezas conmemorativas para funerarias y familias, creadas con cuidado a partir de fotografías, música e información aprobadas por ellas. Creamos 
-              videoclips y música original para homenajes y actos conmemorativos, con un enfoque personal y respetuoso para recordar a personas, momentos y acontecimientos importantes.</p>
-            <a class="card-link" href="mailto:cheburek3585@gmail.com?subject=Homenaje%20audiovisual">Hablar con sensibilidad ↗</a>
-          </article>
+  <div class="service-top"><span class="service-icon" aria-hidden="true">✧</span><span class="service-price custom">A medida</span></div>
+  <h3>Homenajes audiovisuales</h3>
+  <p>Creamos vídeos conmemorativos y música original para homenajes, a partir de fotografías y recuerdos aprobados por la familia, con un enfoque personal y respetuoso.</p>
+  <a class="card-link" href="mailto:cheburek3585@gmail.com?subject=Homenaje%20audiovisual">Hablar con sensibilidad ↗</a>
+</article>
           <article class="service-card">
             <div class="service-top"><span class="service-icon" aria-hidden="true">✦</span><span class="service-price">Desde 35 € + IVA</span></div>
             <h3>Imágenes y efectos de producto</h3>
@@ -483,21 +481,19 @@
         </div>
         <div class="creative-grid">
           <article class="creative-card">
-            <div class="creative-art product" aria-label="Ilustración conceptual de una pizza con ingredientes separados">
-              <span class="mini-pizza"></span><i class="mini-ingredient mi-one"></i><i class="mini-ingredient mi-two"></i><i class="mini-ingredient mi-three"></i>
-            </div>
-            <div class="creative-copy"><small>Producto · Exploded view + food splash</small><h3>Que se vea cada capa.</h3><p>Ingredientes y componentes se separan o entran en escena para convertir el producto en el protagonista.</p></div>
+            <div class="creative-art product"><img src="reloj_descompuesto.png" alt="Reloj mostrado con sus componentes separados" loading="lazy"></div>
+            <div class="creative-copy"><small>Producto · Vista descompuesta</small><h3>Que se vea cada pieza.</h3><p>Mostramos el reloj con sus componentes separados para destacar su diseño y sus detalles.</p></div>
           </article>
           <article class="creative-card">
-            <div class="creative-art music" aria-label="Ilustración abstracta de un universo musical digital"><span class="music-line"></span><span class="music-line two"></span><span class="music-orb" aria-hidden="true">♫</span></div>
+            <div class="creative-art music"><img src="video_musical.gif" alt="Videoclip musical" loading="lazy"></div>
             <div class="creative-copy"><small>Música · Vídeo</small><h3>Una canción. Un universo visual.</h3><p>Construimos una dirección visual para que imagen, ritmo y atmósfera acompañen tu sonido.</p></div>
           </article>
           <article class="creative-card">
-            <div class="creative-art memory" aria-label="Ilustración serena de una luz conmemorativa"><span class="memory-ring"></span><span class="memory-light"></span></div>
+            <div class="creative-art memory"><video controls playsinline preload="metadata" aria-label="Vídeo conmemorativo"><source src="video_homenaje.mp4" type="video/mp4">Tu navegador no puede reproducir este vídeo.</video></div>
             <div class="creative-copy"><small>Memoria · Homenaje</small><h3>Contar una vida con respeto.</h3><p>Un recuerdo audiovisual cuidado, creado junto a la familia y la funeraria.</p></div>
           </article>
         </div>
-        <p class="concept-note">Las ilustraciones de esta página son conceptos visuales, no proyectos realizados para clientes.</p>
+        <p class="concept-note">Estos ejemplos muestran distintos formatos visuales que podemos crear para tu proyecto.</p>
       </div>
     </section>
 
@@ -533,9 +529,9 @@
           <p>Lo esencial para saber qué pedir y cómo preparar tu proyecto.</p>
         </div>
         <div class="faq-list">
-          <details class="faq-item"><summary>¿Qué diferencia hay entre exploded view y food splash?</summary><p>En una <em>exploded view</em>, las capas o componentes aparecen separados para mostrar cómo se compone el producto. En un <em>food splash</em>, ingredientes o líquidos parecen salpicar o moverse alrededor. Se pueden combinar en una imagen o un vídeo.</p></details>
+          <details class="faq-item"><summary>¿Qué es una vista descompuesta de producto?</summary><p>Es una imagen o animación que presenta las piezas de un producto separadas para mostrar cómo se compone o destacar sus detalles.</p></details>
           <details class="faq-item"><summary>¿Qué tengo que enviar para crear una campaña de producto?</summary><p>Fotos claras del producto, el logotipo si tienes uno y los datos que quieras comunicar. Antes de publicar, revisas y confirmas nombres, ingredientes, materiales, precios y cualquier afirmación.</p></details>
-          <details class="faq-item"><summary>¿El precio de Nexo Product Boost incluye IVA?</summary><p>El precio base es 149,00 €. Con el 21 % de IVA (31,29 €), el total es 180,29 €. Los demás precios “desde” de la web se indican antes de IVA.</p></details>
+          <details class="faq-item"><summary>¿El precio del paquete Nexo Lanzamiento de Producto incluye IVA?</summary><p>El precio base es 149,00 €. Con el 21 % de IVA (31,29 €), el total es 180,29 €. Los demás precios “desde” de la web se indican antes de IVA.</p></details>
           <details class="faq-item"><summary>¿Los vídeos musicales y homenajes tienen un precio fijo?</summary><p>Se preparan a medida según duración, materiales, estilo y alcance. En los homenajes audiovisuales, el contenido y las imágenes se trabajan con autorización y aprobación de la familia o de quien la represente.</p></details>
           <details class="faq-item"><summary>¿Se incluye la inversión en anuncios o la impresión?</summary><p>No. El gasto de publicidad en plataformas, la producción física y las licencias de terceros se presupuestan aparte si el proyecto las necesita.</p></details>
         </div>
